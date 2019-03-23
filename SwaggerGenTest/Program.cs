@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Swashbuckle.Application;
 using Swashbuckle.Swagger;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,8 @@ namespace SwaggerGenTest
                 Formatting.Indented,
                 new JsonSerializerSettings
                 {
-                    NullValueHandling = NullValueHandling.Ignore
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Converters = new[] { new VendorExtensionsConverter() }
                 }
             );
 
