@@ -103,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenAPI.config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -151,7 +154,7 @@
   </Target>
   <PropertyGroup>
     <PostBuildEvent>"$(TargetPath)" &gt; swagger.json
-java -jar "$(SolutionDir)node_modules\@openapitools\openapi-generator-cli\bin\openapi-generator.jar" generate -i swagger.json -g typescript-angular -o "$(TargetDir)AngularAPI"
+java -jar "$(SolutionDir)node_modules\@openapitools\openapi-generator-cli\bin\openapi-generator.jar" generate -i swagger.json -g typescript-angular -o "$(TargetDir)AngularAPI" -c OpenAPI.config.json
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
