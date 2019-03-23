@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="myapp.ts" />
+    <None Remove="myclass.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\myapp.js" />
+    <None Include="wwwroot\myapp.js.map" />
+    <None Include="wwwroot\myclass.js" />
+    <None Include="wwwroot\myclass.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\myapp.ts">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\myclass.ts" />
+  </ItemGroup>
+
+</Project>
