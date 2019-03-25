@@ -47,6 +47,10 @@ namespace CircularReference
             this.initial = initial;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="CircularReferenceException">Thrown if an object is encountered more than once</exception>
         public void Validate()
         {
             WalkReferences(initial);

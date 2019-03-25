@@ -28,7 +28,7 @@ namespace CircularReference
             {
                 refVal.Validate();
             }
-            catch (Exception e)
+            catch (CircularReferenceException e)
             {
                 Console.WriteLine($"Caught CircularReferenceException: {e.Message}");
             }
