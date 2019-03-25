@@ -5,6 +5,7 @@ var default_1 = /** @class */ (function () {
         this.val = 10;
     }
     default_1.prototype.GetValue = function () {
+        // this is returning a value
         return this.val;
     };
     return default_1;
