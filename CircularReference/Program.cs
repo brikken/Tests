@@ -14,7 +14,24 @@ namespace CircularReference
             var refB = new ReferenceTest() { Id = 2, Ref = refA };
             var refC = new ReferenceTest() { Id = 3, Ref = refB };
             refA.Ref = refC;
-            Reference.CheckCircular(refA);
+            try
+            {
+                Reference.CheckCircular(refA);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Caught circular reference exception: {e.Message}");
+            }
+
+            var refVal = new ReferenceValidator<ReferenceTest>(r => r.Ref, refA);
+            try
+            {
+                refVal.Validate();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Caught CircularReferenceException: {e.Message}");
+            }
         }
     }
 }
