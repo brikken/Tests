@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concepts", "Concepts", "{F2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircularReference", "CircularReference\CircularReference.csproj", "{1EA66315-B652-47E8-BD1B-18AF5CBBF063}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functional", "Functional", "{A2355BD9-5680-457C-8838-E588AA8A8A71}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Misc", "Misc\Misc.fsproj", "{7C7E1F4D-B6A2-44AB-B254-AE05522217B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{1EA66315-B652-47E8-BD1B-18AF5CBBF063}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EA66315-B652-47E8-BD1B-18AF5CBBF063}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EA66315-B652-47E8-BD1B-18AF5CBBF063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7E1F4D-B6A2-44AB-B254-AE05522217B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7E1F4D-B6A2-44AB-B254-AE05522217B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7E1F4D-B6A2-44AB-B254-AE05522217B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7E1F4D-B6A2-44AB-B254-AE05522217B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,7 @@ Global
 		{5C1DA3AB-8BFE-4700-9BF6-A0EC474E5102} = {1461F486-C1C8-4C3A-A636-E1AF8665E255}
 		{EA2A0670-67BF-4231-8754-9181F0F8C711} = {1461F486-C1C8-4C3A-A636-E1AF8665E255}
 		{1EA66315-B652-47E8-BD1B-18AF5CBBF063} = {F238D9A8-477D-47C9-A154-9538122D362B}
+		{7C7E1F4D-B6A2-44AB-B254-AE05522217B9} = {A2355BD9-5680-457C-8838-E588AA8A8A71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F1DEB76-C0B7-48CC-A1CE-2C28BBED11F7}
