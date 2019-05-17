@@ -48,6 +48,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="TurtleInterpreter.fs" />
     <Compile Include="TypeTest.fs" />
+    <Compile Include="ElevatorState.fs" />
     <Compile Include="Elevator.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />

@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Swashbuckle.Application;
 using Swashbuckle.Swagger;
 using System;
 using System.Collections.Generic;
@@ -18,11 +17,11 @@ namespace SwaggerGenTest
             WebApiConfig.Register(httpConfig);
             httpConfig.EnsureInitialized();
 
-            var swaggerProvider = new SwaggerGenerator(
+            var swaggerProvider = new Swashbuckle.Swagger.SwaggerGenerator(
                 httpConfig.Services.GetApiExplorer(),
                 httpConfig.Formatters.JsonFormatter.SerializerSettings,
-                new Dictionary<string, Info> { { "v1", new Info { version = "v1", title = "My API" } } },
-                new SwaggerGeneratorOptions(
+                new Dictionary<string, Swashbuckle.Swagger.Info> { { "v1", new Swashbuckle.Swagger.Info { version = "v1", title = "My API" } } },
+                new Swashbuckle.Swagger.SwaggerGeneratorOptions(
                     schemaIdSelector: (type) => type.FriendlyId(true),
                     conflictingActionsResolver: (apiDescriptions) => apiDescriptions.First()
                 )
@@ -35,7 +34,7 @@ namespace SwaggerGenTest
                 new JsonSerializerSettings
                 {
                     NullValueHandling = NullValueHandling.Ignore,
-                    Converters = new[] { new VendorExtensionsConverter() }
+                    Converters = new[] { new Swashbuckle.Application.VendorExtensionsConverter() }
                 }
             );
 
